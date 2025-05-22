@@ -104,11 +104,11 @@ const Footer = () => {
         </ul>
       </StyledSocialLinks>
 
-      <StyledCredit tabindex="-1">
+      {/*<StyledCredit tabindex="-1">
         <a>
           <div></div>
 
-          {/*{githubInfo.stars && githubInfo.forks && (
+          {githubInfo.stars && githubInfo.forks && (
             <div className="github-stats">
               <span>
                 <Icon name="Star" />
@@ -119,9 +119,9 @@ const Footer = () => {
                 <span>{githubInfo.forks.toLocaleString()}</span>
               </span>
             </div>
-          )}*/}
+          )}
         </a>
-      </StyledCredit>
+      </StyledCredit> */}
     </StyledFooter>
   );
 };

@@ -93,6 +93,7 @@ module.exports = {
               linkImagesToOriginal: true,
               quality: 90,
               tracedSVG: { color: config.colors.green },
+              generateAvif: false, 
             },
           },
           {

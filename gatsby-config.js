@@ -3,8 +3,7 @@ const config = require('./src/config');
 module.exports = {
   siteMetadata: {
     title: 'Salman Aziz',
-    description:
-      'Salman is Electrical Engineer.',
+    description: 'Salman is Electrical Engineer.',
     siteUrl: 'https://salmanaziz.netlify.app', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
@@ -12,11 +11,19 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-image`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `jpg`], // ✅ Excludes AVIF
+        },
+      },
+    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

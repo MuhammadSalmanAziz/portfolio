@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sharp`,
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
@@ -20,6 +20,14 @@ module.exports = {
       options: {
         defaults: {
           formats: [`auto`, `webp`, `jpg`], // ✅ Excludes AVIF
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `jpg`], // disables avif
         },
       },
     },
